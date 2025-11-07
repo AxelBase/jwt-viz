@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AxelBase – JWT Claims Tree View Visualizer</title>
+
+		<!-- Use ../.. for static icons and manifest that live in the static/ folder -->
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+		<link rel="manifest" href="../../manifest.json" />
+
+		<!-- Default SEO / Social meta -->
+		<meta
+			name="description"
+			content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
+		/>
+		<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
+		<meta
+			property="og:description"
+			content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
+		/>
+		
+		<link href="../../_app/immutable/assets/0.CnzP1Ufl.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/7.Bt-r12sd.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.98TYlUFx.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BJFUGEec.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/rEhao4TL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B8lsjMoc.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DxA9Txhh.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DPArV1ay.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.B9FRizxW.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BiDjd_JR.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/UTyZ3_iR.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/6QhtS5DY.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DY_axP0I.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.CayujjPv.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ClO1E91g.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/v36IXNt3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bh-MjKTz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/yX2vLngz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CZ-NYQlp.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/7.-XepwfSi.js"><!--12qhfyh--><meta name="viewport" content="width=device-width, initial-scale=1"/> <link rel="manifest" href="../../manifest.json"/> <link rel="icon" href="../../AxelLab-Logo.ico" sizes="any"/><!----><!--led0iy--><meta name="description" content="Discover how tree-based visualization transforms complex, nested JWT claims into readable, interactive structures."/> <meta property="og:title" content="Visualizing Claims: A Developer’s Best Friend | JWT Viz Blog"/> <meta property="og:description" content="Discover how tree-based visualization transforms complex, nested JWT claims into readable, interactive structures."/> <meta property="og:url" content="../../blog/posts/post4"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Visualizing Claims: A Developer’s Best Friend | JWT Viz Blog</title>
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div><!--[--><!--[--><!----><header class="navbar"><div class="navbar-container"><div class="navbar-left"><a href="../../" class="navbar-logo-link" aria-label="AxelBase Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo-img"/></a> <a href="../../" class="navbar-brand">AxelBase</a> <div class="bmac-container"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span>Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <nav class="navbar-right"><ul class="navbar-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></div></header> <main class="main-content"><!--[--><!----><div class="container fade-in post-layout svelte-led0iy"><div class="breadcrumbs svelte-led0iy"><a href="../../blog" class="svelte-led0iy">Blog</a> <span>/</span> <p class="svelte-led0iy">Visualizing Claims: A Developer’s Best Friend</p></div> <article class="prose svelte-led0iy"><h1 class="svelte-led0iy">Visualizing Claims: A Developer’s Best Friend</h1> <p class="post-meta svelte-led0iy">Published: November 07, 2025</p> <p class="svelte-led0iy">JSON Web Tokens often contain deeply nested claims—user roles, permissions, metadata, and
+			custom fields. Reading them in raw JSON format is tedious and error-prone. This is where
+			interactive tree visualization becomes indispensable.</p> <h2 class="svelte-led0iy">The Problem with Raw JSON</h2> <p class="svelte-led0iy">Consider this payload:</p> <pre class="svelte-led0iy"><code>{
+  "user": {
+    "id": 123,
+    "profile": { "name": "Alex", "avatar": "..." },
+    "permissions": { "admin": true, "features": { "beta": true } }
+  },
+  "exp": 1754630400
+}</code></pre> <p class="svelte-led0iy">Even with syntax highlighting, finding specific values requires scrolling and mental mapping.
+			In large tokens, it’s nearly impossible to grasp structure at a glance.</p> <h2 class="svelte-led0iy">How Tree Views Solve This</h2> <p class="svelte-led0iy">Tree-based UI transforms flat JSON into a collapsible hierarchy:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy"><strong>Expand/collapse</strong> any node to focus on relevant data</li> <li class="svelte-led0iy"><strong>Search</strong> across keys and values instantly</li> <li class="svelte-led0iy"><strong>Highlight</strong> standard claims (<code>exp</code>, <code>iss</code>, <code>aud</code>) for quick identification</li> <li class="svelte-led0iy"><strong>Color-code</strong> expired or invalid timestamps</li></ul> <h2 class="svelte-led0iy">Real-World Debugging Wins</h2> <p class="svelte-led0iy">During development, a misplaced claim in a nested object can break authorization. Tree views
+			let you:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">Spot missing <code>role</code> fields in seconds</li> <li class="svelte-led0iy">Verify <code>exp</code> and <code>nbf</code> are correctly set</li> <li class="svelte-led0iy">Compare tokens side-by-side in dual panels (header vs payload)</li></ul> <h2 class="svelte-led0iy">Why It Matters for Security Teams</h2> <p class="svelte-led0iy">Security analysts use JWT Viz to:</p> <ul class="svelte-led0iy"><li class="svelte-led0iy">Detect suspicious custom claims (e.g., hidden <code>admin: true</code>)</li> <li class="svelte-led0iy">Validate <code>aud</code> and <code>iss</code> match expected values</li> <li class="svelte-led0iy">Export findings as PNG or JSON for incident reports</li></ul> <h2 class="svelte-led0iy">Built for Speed and Privacy</h2> <p class="svelte-led0iy">Unlike online tools, JWT Viz runs 100% client-side. No data leaves your browser. Paste,
+			inspect, done.</p> <h2 class="svelte-led0iy">FAQ</h2> <details class="svelte-led0iy"><summary class="svelte-led0iy">Can I use this in production logs?</summary> <p class="svelte-led0iy">Yes—copy tokens from logs, paste into JWT Viz, and analyze offline.</p></details> <details class="svelte-led0iy"><summary class="svelte-led0iy">Does it support very large tokens?</summary> <p class="svelte-led0iy">Optimized for tokens up to 10KB. Larger ones may impact performance.</p></details> <details class="svelte-led0iy"><summary class="svelte-led0iy">Can I share a visualized token?</summary> <p class="svelte-led0iy">Export as PNG or copy decoded JSON. Full token remains private.</p></details> <p class="italic-note svelte-led0iy">Stop squinting at JSON. Let tree views do the heavy lifting.</p></article></div><!----><!--]--></main> <footer class="footer"><div class="footer-content"><span>© 2025 AxelBase JWT Claims Tree View Visualizer</span> <div class="footer-links"><a href="../../privacy">Privacy Policy</a> <a href="../../terms">Terms and Conditions</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1x9b7g0 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/jwt-viz"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.98TYlUFx.js"),
+						import("../../_app/immutable/entry/app.B9FRizxW.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

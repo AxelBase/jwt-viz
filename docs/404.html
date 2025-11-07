@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AxelBase – JWT Claims Tree View Visualizer</title>
+
+		<!-- Use /jwt-viz for static icons and manifest that live in the static/ folder -->
+		<link rel="icon" href="/jwt-viz/AxelLab-Logo.ico" />
+		<link rel="manifest" href="/jwt-viz/manifest.json" />
+
+		<!-- Default SEO / Social meta -->
+		<meta
+			name="description"
+			content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
+		/>
+		<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
+		<meta
+			property="og:description"
+			content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
+		/>
+		
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/entry/start.98TYlUFx.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/BJFUGEec.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/rEhao4TL.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/B8lsjMoc.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/DxA9Txhh.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/DPArV1ay.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/entry/app.B9FRizxW.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/BiDjd_JR.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/UTyZ3_iR.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/6QhtS5DY.js">
+		<link rel="modulepreload" href="/jwt-viz/_app/immutable/chunks/DY_axP0I.js">
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div>
+			<script>
+				{
+					__sveltekit_1x9b7g0 = {
+						base: "/jwt-viz",
+						assets: "/jwt-viz"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/jwt-viz/_app/immutable/entry/start.98TYlUFx.js"),
+						import("/jwt-viz/_app/immutable/entry/app.B9FRizxW.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

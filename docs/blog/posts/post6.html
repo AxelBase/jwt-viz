@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AxelBase – JWT Claims Tree View Visualizer</title>
+
+		<!-- Use ../.. for static icons and manifest that live in the static/ folder -->
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+		<link rel="manifest" href="../../manifest.json" />
+
+		<!-- Default SEO / Social meta -->
+		<meta
+			name="description"
+			content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
+		/>
+		<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
+		<meta
+			property="og:description"
+			content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
+		/>
+		
+		<link href="../../_app/immutable/assets/0.CnzP1Ufl.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/9.BgqPb9Oe.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.98TYlUFx.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BJFUGEec.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/rEhao4TL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B8lsjMoc.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DxA9Txhh.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DPArV1ay.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.B9FRizxW.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BiDjd_JR.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/UTyZ3_iR.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/6QhtS5DY.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DY_axP0I.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.CayujjPv.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ClO1E91g.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/v36IXNt3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bh-MjKTz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/yX2vLngz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CZ-NYQlp.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/9.Bja9gS_N.js"><!--12qhfyh--><meta name="viewport" content="width=device-width, initial-scale=1"/> <link rel="manifest" href="../../manifest.json"/> <link rel="icon" href="../../AxelLab-Logo.ico" sizes="any"/><!----><!--q8x3kg--><meta name="description" content="Use Web Crypto API to verify RS256 and HS256 signatures directly in the browser—no server required."/> <meta property="og:title" content="Verifying Signatures Without a Backend | JWT Viz Blog"/> <meta property="og:description" content="Use Web Crypto API to verify RS256 and HS256 signatures directly in the browser—no server required."/> <meta property="og:url" content="../../blog/posts/post6"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Verifying Signatures Without a Backend | JWT Viz Blog</title>
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div><!--[--><!--[--><!----><header class="navbar"><div class="navbar-container"><div class="navbar-left"><a href="../../" class="navbar-logo-link" aria-label="AxelBase Home"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo-img"/></a> <a href="../../" class="navbar-brand">AxelBase</a> <div class="bmac-container"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span>Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <nav class="navbar-right"><ul class="navbar-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to-use">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></div></header> <main class="main-content"><!--[--><!----><div class="container fade-in post-layout svelte-q8x3kg"><div class="breadcrumbs svelte-q8x3kg"><a href="../../blog" class="svelte-q8x3kg">Blog</a> <span>/</span> <p class="svelte-q8x3kg">Verifying Signatures Without a Backend</p></div> <article class="prose svelte-q8x3kg"><h1 class="svelte-q8x3kg">Verifying Signatures Without a Backend</h1> <p class="post-meta svelte-q8x3kg">Published: November 07, 2025</p> <p class="svelte-q8x3kg">Traditionally, JWT signature verification requires a backend. But what if you’re offline, in a
+			restricted network, or just want to validate a token locally? JWT Viz brings cryptographic
+			verification to the browser using the Web Crypto API.</p> <h2 class="svelte-q8x3kg">Supported Algorithms</h2> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg"><strong>HS256</strong>: HMAC with SHA-256 (symmetric secret)</li> <li class="svelte-q8x3kg"><strong>RS256</strong>: RSA with SHA-256 (asymmetric public key)</li></ul> <h2 class="svelte-q8x3kg">How It Works</h2> <p class="svelte-q8x3kg">When you paste a public key or secret:</p> <ol class="svelte-q8x3kg"><li class="svelte-q8x3kg">Header and payload are re-encoded</li> <li class="svelte-q8x3kg">Signature is decoded from Base64Url</li> <li class="svelte-q8x3kg"><code>crypto.subtle.verify()</code> checks integrity</li> <li class="svelte-q8x3kg">Result: “Verified”, “Invalid”, or error</li></ol> <h2 class="svelte-q8x3kg">Use Cases</h2> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg"><strong>Log Analysis</strong>: Verify tokens from logs match expected keys</li> <li class="svelte-q8x3kg"><strong>Penetration Testing</strong>: Test if weak secrets are in use</li> <li class="svelte-q8x3kg"><strong>Education</strong>: Teach signature concepts hands-on</li></ul> <h2 class="svelte-q8x3kg">Limitations</h2> <p class="svelte-q8x3kg">Client-side verification is for inspection only. Production systems must verify on the server.
+			Never trust client-validated tokens for access control.</p> <h2 class="svelte-q8x3kg">Security Notes</h2> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Keys are never stored or sent</li> <li class="svelte-q8x3kg">Works in memory only</li> <li class="svelte-q8x3kg">Supports PEM SPKI format for RS256</li></ul> <h2 class="svelte-q8x3kg">FAQ</h2> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Can I verify ES256 or EdDSA?</summary> <p class="svelte-q8x3kg">Not yet—Web Crypto support is limited. RS256/HS256 cover 95% of use cases.</p></details> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Is this safe for production secrets?</summary> <p class="svelte-q8x3kg">Yes for inspection. Avoid pasting highly sensitive keys in shared environments.</p></details> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Why not use jwt.io?</summary> <p class="svelte-q8x3kg">JWT Viz is offline, private, and offers tree visualization + export.</p></details> <p class="italic-note svelte-q8x3kg">Verify signatures anywhere. No backend. No excuses.</p></article></div><!----><!--]--></main> <footer class="footer"><div class="footer-content"><span>© 2025 AxelBase JWT Claims Tree View Visualizer</span> <div class="footer-links"><a href="../../privacy">Privacy Policy</a> <a href="../../terms">Terms and Conditions</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1x9b7g0 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/jwt-viz"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.98TYlUFx.js"),
+						import("../../_app/immutable/entry/app.B9FRizxW.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 9],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

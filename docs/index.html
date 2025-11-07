@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AxelBase – JWT Claims Tree View Visualizer</title>
+
+		<!-- Use . for static icons and manifest that live in the static/ folder -->
+		<link rel="icon" href="./AxelLab-Logo.ico" />
+		<link rel="manifest" href="./manifest.json" />
+
+		<!-- Default SEO / Social meta -->
+		<meta
+			name="description"
+			content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
+		/>
+		<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
+		<meta
+			property="og:description"
+			content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
+		/>
+		
+		<link href="./_app/immutable/assets/0.CnzP1Ufl.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.CgGmKhwm.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.98TYlUFx.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BJFUGEec.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/rEhao4TL.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B8lsjMoc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DxA9Txhh.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DPArV1ay.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.B9FRizxW.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BiDjd_JR.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/UTyZ3_iR.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/6QhtS5DY.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DY_axP0I.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CayujjPv.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ClO1E91g.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/v36IXNt3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bh-MjKTz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/yX2vLngz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CZ-NYQlp.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.D-2tl59G.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/X5Sv9yWS.js"><!--12qhfyh--><meta name="viewport" content="width=device-width, initial-scale=1"/> <link rel="manifest" href="./manifest.json"/> <link rel="icon" href="./AxelLab-Logo.ico" sizes="any"/><!----><!--1uha8ag--><meta name="description" content="Inspect and verify JWTs locally — privacy-first JWT visualization and signature checking."/> <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/> <script type="application/ld+json">
+		{JSON.stringify(siteJsonLd)}
+	</script><!----><title>JWT Viz</title>
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div><!--[--><!--[--><!----><header class="navbar"><div class="navbar-container"><div class="navbar-left"><a href="./" class="navbar-logo-link" aria-label="AxelBase Home"><img src="./AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-logo-img"/></a> <a href="./" class="navbar-brand">AxelBase</a> <div class="bmac-container"><button class="bmac-button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span>Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <nav class="navbar-right"><ul class="navbar-links"><li><a class="nav-link" href="./">Home</a></li> <li><a class="nav-link" href="./#about">About</a></li> <li><a class="nav-link" href="./#how-to-use">How to use</a></li> <li><a class="nav-link" href="./#faq">FAQ</a></li> <li><a class="nav-link" href="./blog">Blog</a></li></ul></nav></div></header> <main class="main-content"><!--[--><!----><div><h4 class="mb-3 text-center">JWT Viz — JSON Web Token Visualizer</h4> <div class="jwt-input-wrapper card svelte-1ctpxo1" role="region" aria-label="JWT input area"><div class="drop-overlay svelte-1ctpxo1"><svg class="drop-icon svelte-1ctpxo1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"></path></svg> <span class="drop-text svelte-1ctpxo1">Drop your JWT file here</span></div> <div class="jwt-input-content svelte-1ctpxo1"><label class="form-label svelte-1ctpxo1" for="jwt-input-textarea">Paste or Drop JWT</label> <textarea>			id=jwt-input-textarea
+			bind:value=
+			on:input=function handleInput() {
+    }
+			class="form-control" rows="5" placeholder="Paste JWT here..."
+		</textarea> <div class="input-footer svelte-1ctpxo1"><label class="file-upload-btn svelte-1ctpxo1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="svelte-1ctpxo1"><path d="M9.25 13.25a.75.75 0 001.5 0V4.77l1.97 1.97a.75.75 0 001.06-1.06l-3.25-3.25a.75.75 0 00-1.06 0L6.22 5.68a.75.75 0 001.06 1.06l1.97-1.97v8.48z"></path><path d="M3.5 12.75a.75.75 0 000 1.5h13a.75.75 0 000-1.5h-13zM10 15.25a.75.75 0 01.75.75v.01a.75.75 0 01-1.5 0V16a.75.75 0 01.75-.75z"></path></svg> Upload File <input type="file" accept=".txt,.jwt" class="visually-hidden svelte-1ctpxo1" aria-label="Upload JWT file"/></label> <small class="helper-text svelte-1ctpxo1">Auto-decodes after paste or upload.</small></div></div></div><!----> <!--[!--><!--[!--><!--]--><!--]--></div> <div class="container mt-5"><section id="about" class="page-section mb-5"><h2>About JWT Viz</h2> <p><strong>JWT Viz</strong> is a <strong>privacy-first, client-side JSON Web Token visualizer</strong> built for developers, security engineers, and DevOps teams who need to inspect, debug, and validate
+			JWTs without compromising sensitive data. Unlike online JWT tools that send tokens to remote servers,
+			JWT Viz runs <strong>100% in your browser</strong>, ensuring <strong>zero data transmission</strong>, <strong>no logging</strong>, and <strong>complete isolation</strong> of your tokens.</p> <br/> <p>Designed with modern web standards and performance in mind, JWT Viz leverages <strong>SvelteKit</strong> and the <strong>Web Crypto API</strong> to deliver a fast, responsive, and offline-capable
+			experience. Whether you're analyzing authentication flows, auditing third-party tokens, or
+			teaching JWT concepts, this tool transforms complex, nested claims into an <strong>interactive, searchable tree structure</strong>—making debugging intuitive and
+			efficient.</p> <br/> <p>The core philosophy behind JWT Viz is <strong>transparency and control</strong>. Every
+			operation—from Base64 decoding to signature verification—happens locally using
+			standards-compliant JavaScript. You can paste tokens from logs, upload them via drag-and-drop,
+			or even install the app as a <strong>Progressive Web App (PWA)</strong> for instant access on desktop or mobile, even without an internet connection.</p> <br/> <p>Key features include:</p> <ul><li><strong>Dual-panel tree view</strong> of header and payload with expand/collapse and search</li> <li><strong>Real-time syntax-highlighted JSON</strong> and encoded segment display</li> <li><strong>Client-side signature verification</strong> for HS256 and RS256 using public keys or secrets</li> <li><strong>Export options</strong>: Copy JSON, download decoded object, or capture PNG
+				screenshots</li> <li><strong>Standard claim highlighting</strong> (e.g., <code>exp</code>, <code>iss</code>) with expiration warnings</li></ul> <p>Built as a <strong>static site</strong>, JWT Viz generates a single <code>index.html</code> with bundled assets—making it ideal for internal tools, documentation, or secure environments.
+			Host it on any static file server, share via USB, or embed in Confluence. No backend, no database,
+			no risk.</p> <p>JWT Viz is <strong>open source</strong> under the MIT License and actively maintained on
+			GitHub. Contributions are welcome—from bug reports to new visualization ideas. Our goal is to
+			make JWT inspection <strong>accessible, secure, and educational</strong> for everyone in the web security ecosystem.</p> <p class="italic-note"><em>Because understanding a token shouldn’t require trusting a third party.</em></p></section> <section id="how-to-use" class="page-section mb-5"><h2>How to Use JWT Viz</h2> <p>Getting started with JWT Viz is simple and requires <strong>no installation</strong>. Follow
+			these steps to inspect and verify any JWT in seconds:</p> <h4>1. Input Your Token</h4> <p><strong>Paste</strong> a JWT into the large text area at the top, or <strong>drag and drop</strong> a <code>.txt</code> or <code>.jwt</code> file directly onto the input box. The tool instantly parses the token and
+			displays any errors (e.g., malformed format, invalid Base64).</p> <h4>2. Explore the Tree View</h4> <p>Once decoded, the <strong>header</strong> and <strong>payload</strong> appear side-by-side in
+			interactive tree panels. Click any node to expand or collapse nested objects. Use the <strong>search bar</strong> to filter claims by key or value—perfect for finding <code>role</code>, <code>scope</code>, or
+			custom fields in large tokens.</p> <p>Standard claims like <code>iss</code>, <code>sub</code>, <code>exp</code>, and <code>iat</code> are <strong>highlighted in bold blue</strong>. Expiration (<code>exp</code>) and not-before (<code>nbf</code>) timestamps are <strong>color-coded</strong>: green if valid, red if expired.</p> <h4>3. Switch Between Tabs</h4> <p>Use the tab navigation to switch views:</p> <ul><li><strong>Tree</strong>: Interactive claim hierarchy (default)</li> <li><strong>Raw JSON</strong>: Syntax-highlighted, formatted header and payload</li> <li><strong>Encoded</strong>: Base64Url segments with copyable text</li></ul> <h4>4. Verify the Signature (Optional)</h4> <p>Scroll to the <strong>Signature Status</strong> card. Paste a <strong>secret</strong> (for
+			HS256) or <strong>public key in PEM/SPKI format</strong> (for RS256). The tool uses the Web Crypto API to verify the signature <strong>in-browser</strong>. Results show:</p> <ul><li><span class="badge bg-success">Verified</span> — Signature matches</li> <li><span class="badge bg-danger">Invalid</span> — Tampered or wrong key</li> <li><span class="badge bg-warning">Unsigned</span> — <code>alg: none</code></li></ul> <h4>5. Export Your Findings</h4> <p>Use the export buttons to:</p> <ul><li><strong>Copy</strong> header, payload, or full decoded JSON</li> <li><strong>Download</strong> <code>jwt-decoded.json</code></li> <li><strong>Capture</strong> a high-resolution PNG of the current view</li></ul> <h4>6. Go Offline (PWA)</h4> <p>Click the <strong>install icon</strong> in your browser’s address bar to add JWT Viz to your home
+			screen. It works fully offline—ideal for secure environments or travel.</p> <p class="italic-note"><em>Pro tip: Use “Expand All” in tree view to audit every claim at once.</em></p></section> <section id="faq" class="page-section"><h2>Frequently Asked Questions</h2> <div class="faq-accordion"><details><summary>Is my JWT data sent to a server?</summary> <div class="faq-content"><p><strong>No.</strong> JWT Viz is <strong>100% client-side</strong>. All parsing, decoding, visualization, and
+						signature verification happen in your browser using JavaScript and Web Crypto. No data
+						is transmitted, logged, or stored. You can verify this by checking network requests or
+						running it offline.</p></div></details> <details><summary>Can I use JWT Viz in air-gapped environments?</summary> <div class="faq-content"><p>Yes. After the first load, the PWA caches all assets. You can copy the <code>build/</code> folder to a USB drive and run <code>index.html</code> on any modern browser—no internet required.</p></div></details> <details><summary>What does “Signature Verified” really mean?</summary> <div class="faq-content"><p>It means the cryptographic signature matches the header and payload using the provided
+						key. However, it does <strong>not</strong> prove <strong>who</strong> issued the
+						token—only that it hasn’t been tampered with since signing. Always validate <code>iss</code> and <code>aud</code> claims in production.</p></div></details> <details><summary>Which algorithms are supported for verification?</summary> <div class="faq-content"><p><strong>HS256</strong> (HMAC-SHA256) and <strong>RS256</strong> (RSA-SHA256). These cover ~95% of real-world use
+						cases. ES256 and others are not yet supported due to Web Crypto limitations.</p></div></details> <details><summary>Why can’t I paste a private key?</summary> <div class="faq-content"><p>For security, only <strong>public keys</strong> (RS256) or <strong>shared secrets</strong> (HS256) should be used in the browser. Private keys should <strong>never</strong> leave secure environments. JWT Viz enforces this pattern.</p></div></details> <details><summary>Is JWT Viz safe for production tokens?</summary> <div class="faq-content"><p>Yes for <strong>inspection and debugging</strong>. Never use client-side verification
+						for access control in production—always validate on the server. Use JWT Viz to audit
+						logs, test implementations, or educate teams.</p></div></details> <details><summary>Can I embed JWT Viz in my documentation?</summary> <div class="faq-content"><p>Absolutely. Host the static build on your internal wiki, Confluence, or Notion. It’s
+						lightweight (&lt;250KB) and requires no backend.</p></div></details> <details><summary>How do I report a bug or suggest a feature?</summary> <div class="faq-content"><p>Open an issue on our <a href="https://github.com/your-repo/jwt-viz" target="_blank" rel="noopener">GitHub repository</a>. Pull requests are welcome!</p></div></details></div> <p class="italic-note"><em>Still have questions? The source code is your documentation.</em></p></section></div><!----><!--]--></main> <footer class="footer"><div class="footer-content"><span>© 2025 AxelBase JWT Claims Tree View Visualizer</span> <div class="footer-links"><a href="./privacy">Privacy Policy</a> <a href="./terms">Terms and Conditions</a></div></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1x9b7g0 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/jwt-viz"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.98TYlUFx.js"),
+						import("./_app/immutable/entry/app.B9FRizxW.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

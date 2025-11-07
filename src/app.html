@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AxelBase – JWT Claims Tree View Visualizer</title>
+
+		<!-- Use %sveltekit.assets% for static icons and manifest that live in the static/ folder -->
+		<link rel="icon" href="%sveltekit.assets%/AxelLab-Logo.ico" />
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+
+		<!-- Default SEO / Social meta -->
+		<meta
+			name="description"
+			content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
+		/>
+		<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
+		<meta
+			property="og:description"
+			content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
+		/>
+		%sveltekit.head%
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div>%sveltekit.body%</div>
+	</body>
+</html>

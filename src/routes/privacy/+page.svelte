@@ -1,0 +1,202 @@
+<!-- src/routes/privacy/+page.svelte -->
+
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
+<svelte:head>
+	<title>Privacy Policy | JWT Viz</title>
+	<meta
+		name="description"
+		content="JWT Viz processes all tokens locally in your browser. No data is collected, stored, or transmitted to any server."
+	/>
+	<meta property="og:title" content="Privacy Policy | JWT Viz" />
+	<meta
+		property="og:description"
+		content="JWT Viz processes all tokens locally in your browser. No data is collected, stored, or transmitted to any server."
+	/>
+	<meta property="og:url" content="{base}/privacy" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
+<div class="container fade-in post-layout">
+	<div class="breadcrumbs">
+		<a href="{base}/">Home</a>
+		<span>/</span>
+		<p>Privacy Policy</p>
+	</div>
+
+	<article class="prose">
+		<h1>Privacy Policy</h1>
+		<p class="post-meta">Effective Date: November 07, 2025</p>
+
+		<h2>1. Our Commitment to Privacy</h2>
+		<p>
+			<strong>JWT Viz</strong> is a **client-side, offline-first** web application designed for inspecting
+			and visualizing JSON Web Tokens (JWTs). We operate under a **zero-data-collection policy**—your
+			tokens, inputs, and usage never leave your browser. This Privacy Policy explains our practices
+			to ensure complete transparency and trust.
+		</p>
+
+		<h2>2. No Data Collection</h2>
+		<p>We **do not collect, store, or transmit** any of the following:</p>
+		<ul>
+			<li>
+				<strong>JWT Tokens</strong>: Whether pasted, uploaded, or generated—all processing happens
+				locally using Web Crypto and JavaScript.
+			</li>
+			<li>
+				<strong>Personal Information</strong>: No names, emails, IP addresses, or device identifiers
+				are recorded.
+			</li>
+			<li>
+				<strong>Usage Analytics</strong>: No tracking pixels, Google Analytics, or behavior
+				monitoring tools are used.
+			</li>
+			<li>
+				<strong>Cookies or Local Storage</strong>: Session data is held only in memory and cleared
+				on page refresh or close.
+			</li>
+		</ul>
+
+		<h2>3. How JWT Viz Works</h2>
+		<p>All functionality is **100% client-side**:</p>
+		<ul>
+			<li>
+				<strong>Parsing & Decoding</strong>: Uses <code>jwt-decode</code> to split and decode Base64Url
+				segments.
+			</li>
+			<li>
+				<strong>Tree Visualization</strong>: Built with Svelte reactivity and Bootstrap—no external
+				rendering services.
+			</li>
+			<li>
+				<strong>Signature Verification</strong>: Optional key input triggers
+				<code>crypto.subtle.verify()</code> in-browser only.
+			</li>
+			<li>
+				<strong>Exports</strong>: PNG screenshots via <code>html2canvas</code> and JSON downloads are
+				generated on your device.
+			</li>
+		</ul>
+		<p><em>Your data never touches a server.</em></p>
+
+		<h2>4. Third-Party Libraries</h2>
+		<p>We use minimal, trusted open-source libraries loaded via CDN or bundled locally:</p>
+		<ul>
+			<li>
+				<code>bootstrap@5.3.3</code>, <code>highlight.js@11.11.1</code>,
+				<code>html2canvas@1.4.1</code>
+			</li>
+		</ul>
+		<p>
+			These do **not** include analytics or tracking scripts. CDN usage is for performance only and
+			does **not** enable user tracking.
+		</p>
+
+		<h2>5. Security & Responsibility</h2>
+		<p>While we ensure no data leaves your browser, you are responsible for:</p>
+		<ul>
+			<li>Using JWT Viz on secure, updated devices</li>
+			<li>Avoiding public or shared computers for sensitive tokens</li>
+			<li>Reviewing exported files before sharing</li>
+		</ul>
+
+		<h2>6. Children’s Privacy</h2>
+		<p>
+			JWT Viz is not directed at children under 13. We do not knowingly process data from minors.
+		</p>
+
+		<h2>7. Compliance</h2>
+		<p>
+			By design, we comply with <strong>GDPR</strong>, <strong>CCPA</strong>, and other privacy
+			laws—because **no personal data is processed**.
+		</p>
+
+		<h2>8. Changes to This Policy</h2>
+		<p>
+			Updates will be posted here with the new effective date. Continued use constitutes acceptance.
+		</p>
+
+		<h2>9. Contact</h2>
+		<p>
+			For privacy concerns, open an issue on our <a
+				href="https://github.com/your-repo/jwt-viz"
+				target="_blank"
+				rel="noopener">GitHub repository</a
+			>.
+		</p>
+
+		<p class="italic-note"><strong>Your tokens. Your browser. Your privacy—guaranteed.</strong></p>
+	</article>
+</div>
+
+<style>
+	.post-layout {
+		max-width: 800px;
+		padding-top: 2rem;
+		padding-bottom: 4rem;
+	}
+	.breadcrumbs {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+	}
+	.breadcrumbs a {
+		color: var(--accent-secondary);
+	}
+	.breadcrumbs a:hover {
+		text-decoration: underline;
+	}
+	.breadcrumbs p {
+		margin: 0;
+	}
+	.prose {
+		line-height: 1.8;
+	}
+	.prose .post-meta {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid var(--border-color);
+		padding-bottom: 1rem;
+	}
+	.prose h1,
+	.prose h2 {
+		color: var(--accent-secondary);
+	}
+	.prose h1 {
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.prose h2 {
+		margin-top: 2.5rem;
+		border-bottom: 1px solid var(--secondary-bg);
+		padding-bottom: 0.5rem;
+	}
+	.prose p {
+		color: var(--text-primary);
+	}
+	.prose ul {
+		list-style-type: '→ ';
+		padding-left: 1.5rem;
+		color: var(--text-primary);
+	}
+	.prose ul li::marker {
+		color: var(--accent-primary);
+	}
+	.prose ul li {
+		padding-left: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.prose .italic-note {
+		font-style: italic;
+		color: var(--text-secondary);
+		text-align: center;
+		margin-top: 3rem;
+	}
+</style>
