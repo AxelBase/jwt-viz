@@ -1,4 +1,5 @@
-<script>
+<!-- src/components/JwtInput.svelte -->
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
@@ -10,13 +11,13 @@
 		dispatch('input', jwtText.trim());
 	}
 
-	function handleFile(e) {
-		const file = e.target.files?.[0];
+	function handleFile(e: Event) {
+		const file = (e.target as HTMLInputElement).files?.[0];
 		if (!file) return;
 		readFile(file);
 	}
 
-	function handleDrop(e) {
+	function handleDrop(e: DragEvent) {
 		e.preventDefault();
 		isDragOver = false;
 		const file = e.dataTransfer?.files?.[0];
@@ -24,10 +25,10 @@
 		readFile(file);
 	}
 
-	function readFile(file) {
+	function readFile(file: File) {
 		const reader = new FileReader();
 		reader.onload = (ev) => {
-			jwtText = String(ev.target.result || '').trim();
+			jwtText = String(ev.target?.result ?? '').trim();
 			handleInput();
 		};
 		reader.readAsText(file);
@@ -59,12 +60,16 @@
 
 	<div class="jwt-input-content">
 		<label class="form-label" for={textareaId}>Paste or Drop JWT</label>
-		<textarea>
+
+		<!-- Explicit closing tag + correct variable -->
+		<textarea
 			id={textareaId}
 			bind:value={jwtText}
 			on:input={handleInput}
-			class="form-control" rows="5" placeholder="Paste JWT here..."
-		</textarea>
+			class="form-control"
+			rows="5"
+			placeholder="Paste JWT here..."
+		></textarea>
 
 		<div class="input-footer">
 			<label class="file-upload-btn">
@@ -91,11 +96,11 @@
 </div>
 
 <style>
-	/* --- Main Wrapper --- */
+	/* ── Main Wrapper ── */
 	.jwt-input-wrapper {
-		position: relative; /* Anchor for the overlay */
+		position: relative;
 		padding: 1.5rem;
-		overflow: hidden; /* Contains the overlay */
+		overflow: hidden;
 		background-color: var(--bg-secondary);
 		border: 1px solid var(--border-color);
 		border-radius: 0.75rem;
@@ -106,13 +111,12 @@
 	}
 
 	.jwt-input-content {
-		/* This holds the actual content, allowing it to be blurred/scaled */
 		transition:
 			transform 0.3s ease,
 			opacity 0.3s ease;
 	}
 
-	/* --- Text Area & Label --- */
+	/* ── Label ── */
 	.form-label {
 		font-size: 1.1rem;
 		font-weight: 600;
@@ -120,25 +124,41 @@
 		margin-bottom: 0.75rem;
 	}
 
-	/* --- Drop Overlay --- */
+	/* ── Textarea (Bootstrap) ── */
+	.form-control {
+		width: 100%;
+		font-family: monospace;
+		resize: vertical;
+		min-height: 120px;
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
+		border: 1px solid var(--border-color);
+		border-radius: 0.5rem;
+		padding: 0.75rem;
+		transition:
+			border-color 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	.form-control:focus {
+		border-color: var(--accent-primary);
+		box-shadow: 0 0 0 0.2rem var(--focus-ring);
+		outline: none;
+	}
+
+	/* ── Drop Overlay ── */
 	.drop-overlay {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: hsla(24, 94%, 50%, 0.1); /* Orange overlay */
+		inset: 0;
+		background-color: hsla(24, 94%, 50%, 0.1);
 		border: 2px dashed var(--accent-primary);
 		border-radius: 0.75rem;
-		margin: 4px; /* Inside the card padding */
-
+		margin: 4px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
-
-		/* Hidden by default */
 		opacity: 0;
 		visibility: hidden;
 		transform: scale(0.95);
@@ -162,7 +182,6 @@
 		color: var(--accent-primary);
 	}
 
-	/* --- Active Drag State --- */
 	.jwt-input-wrapper.drag-over .drop-overlay {
 		opacity: 1;
 		visibility: visible;
@@ -170,12 +189,11 @@
 	}
 
 	.jwt-input-wrapper.drag-over .jwt-input-content {
-		/* Fades out the content behind the overlay */
 		opacity: 0.2;
 		transform: scale(0.98);
 	}
 
-	/* --- Footer & Custom File Button --- */
+	/* ── Footer & File Button ── */
 	.input-footer {
 		display: flex;
 		justify-content: space-between;
@@ -215,7 +233,6 @@
 		color: var(--text-secondary);
 	}
 
-	/* --- Utilities --- */
 	.visually-hidden {
 		position: absolute !important;
 		height: 1px;
