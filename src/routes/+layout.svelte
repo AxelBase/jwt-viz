@@ -30,58 +30,14 @@
 		};
 	}
 
-	// --- Structured Data (JSON-LD) ---
-	const siteJsonLd = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: 'JWT Viz',
-		description: 'Privacy-first, client-side JWT visualizer and debugger.',
-		url: 'https://axelbase.github.io/jwt-viz/',
-		applicationCategory: 'DeveloperApplication',
-		operatingSystem: 'Web Browser',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD'
-		},
-		creator: {
-			'@type': 'Organization',
-			name: 'AxelBase',
-			url: 'https://axelbase.github.io'
-		},
-		screenshot: `https://axelbase.github.io${base}/screenshot.png`,
-		featureList: [
-			'Client-side JWT decoding',
-			'Interactive tree view',
-			'HS256/RS256 signature verification',
-			'PWA installable',
-			'Zero data transmission'
-		]
-	};
-
 	// --- Footer ---
 	const currentYear = new Date().getFullYear();
 </script>
 
 <svelte:head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>JWT Viz — JSON Web Token Visualizer</title>
-	<meta
-		name="description"
-		content="Inspect and verify JWTs locally — privacy-first, client-side JWT visualization and signature checking."
-	/>
-	<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="JWT Viz · Inspect and verify JWTs locally" />
-	<meta
-		property="og:description"
-		content="Privacy-first JWT viewer: decode header/payload, view tree, check signatures client-side."
-	/>
 	<link rel="icon" href="{base}/AxelLab-Logo.ico" sizes="any" />
 	<link rel="manifest" href="{base}/manifest.json" />
-
-	<!-- Inject JSON-LD safely using {@html} + escaped string -->
-	{@html `<script type="application/ld+json">${JSON.stringify(siteJsonLd, null, 2)}<\/script>`}
 </svelte:head>
 
 <header class="navbar">
